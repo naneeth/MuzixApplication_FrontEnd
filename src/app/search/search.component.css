@@ -1,0 +1,32 @@
+.jumbotron text-center h1{
+    text-align: center;
+    padding-top:10px; 
+
+}
+
+.card{
+    padding-bottom:3rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+    background-color: greenyellow;
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+.container{
+    background-color: gray;
+  
+}
+jumbotron text-center{
+    background-color: gray;
+    margin-bottom: 0;
+}
+.box{
+    background-color: gray;
+}
+body{
+    background-image: url("/assets/img.jpg")
+}
+
+
+

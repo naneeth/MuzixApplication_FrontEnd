@@ -1,0 +1,19 @@
+<!-- <p> -->
+<!-- <button >Get All Saved Track</button> -->
+<!-- <button type="button" (click)='get()' class="btn btn-secondary" style="margin-right: 1rem;">Show My Tracks</button> 
+</p> -->
+<body>
+
+<ul >
+  <li class="box" *ngFor='let track of tracks'>
+   
+    id : {{track.trackId}}<br>
+      trackname : {{track.trackName}}<br>
+      comments : {{track.comments}}<br>
+      <button type="button" (click)='deleteTrack(track.trackId)' class="btn btn-secondary" style="margin-right: 1rem;">Remove From MyTracks</button> 
+      <!-- <a type="button" href="update" class="btn btn-secondary" style="margin-right: 1rem;">Update Comments</a>   -->
+      <!-- *ngIf="isOn"  -->
+      <app-update-comments [track]="track"></app-update-comments> 
+  </li>
+</ul>
+</body>

@@ -1,0 +1,82 @@
+  <!-- <input type="text" [(ngModel)]='value'>
+  <button (click)='onSearch(value)'>search</button>  -->
+
+  <!-- <nav class="navbar fixed-top navbar-light bg-light justify-content-between" style="margin-right: 2rem;">
+      <button type="button" class="btn btn-secondary" style="margin-right: 1rem;">Home</button>
+      <button type="button" class="btn btn-secondary" style="padding-right: 2rem;">AllTracks</button>
+      <button type="button" class="btn btn-secondary">Contact</button>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" name="value" placeholder="Search" aria-label="Search" [(ngModel)] =  "value">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)= "onSearch(value)">Search</button>
+      </form>
+     </nav> -->
+
+    <!-- <ul *ngIf='tracks' >
+   <li *ngFor = "let track of tracks"> 
+
+     id : {{track.listeners}}<br>
+     name : {{track.name}}<br>
+     comments : {{track.artist}} <br>
+     <app-add [track]='track'></app-add> -->
+     <!-- <app-add [id]='{{track.listeners}}',[name]='{{track.name}}',[comments]='{{track.artist}}'></app-add> -->
+     <!-- <button (click)='saveTrack(track.listeners,track.name,track.artist)'>Save Track</button> -->
+    <!-- </li>
+   </ul>  -->
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <div  class="box" *ngIf='tracks'>
+        <div class="jumbotron text-center">
+          <h1>Search Results</h1>
+        </div>
+          
+        <div  class="container">
+          <div  class="row" *ngFor = "let track of tracks" style="display:inline-block" class="col-sm-4">
+            <div class='card' >
+              <!-- {{image(track)}} -->
+              <p> <img src="{{image(track)}}"></p>
+              <p> id : {{track.listeners}}</p>
+              <p> name : {{track.name}}</p>
+              <p> comments : {{track.artist}}</p>
+              <app-add [track]='track'></app-add>  
+            </div>
+         
+          </div>
+        </div>
+        </div>
+
+ 
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">MuZixApp</a>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/AllTracks">MyTracks <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+            </li>
+      </ul>
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" name="value" placeholder="Search" aria-label="Search" [(ngModel)] =  "value">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)= "onSearch(value)">Search</button>
+          </form>
+      
+    </div>
+  </nav>
+</body>
+</html>
